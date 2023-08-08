@@ -1,12 +1,12 @@
 CREATE TABLE `bien_immobilier` (
 	`id_propriete` INT NOT NULL AUTO_INCREMENT,
 	`titre_bien` varchar(10000) NOT NULL,
-	`description` TEXT(1000000) NOT NULL,
+	`description` TEXT(60000) NOT NULL,
 	`prix_bien` DECIMAL NOT NULL,
-	`localisation_bien` varchar(10000) NOT NULL,
-	`type_bien` varchar(10000) NOT NULL,
-	`status` varchar(10000) NOT NULL,
-	`image` varchar(10000) NOT NULL,
+	`localisation_bien` varchar(1000) NOT NULL,
+	`type_bien` varchar(1000) NOT NULL,
+	`status` varchar(1000) NOT NULL,
+	`image` varchar(1000) NOT NULL,
 	PRIMARY KEY (`id_propriete`)
 );
 
@@ -16,7 +16,7 @@ CREATE TABLE `agents` (
 	`prenom` varchar(250) NOT NULL,
 	`contact_telephone` varchar(205) NOT NULL,
 	`email` varchar(250) NOT NULL,
-	`biographie` varchar(10000) NOT NULL,
+	`biographie` varchar(1000) NOT NULL,
 	PRIMARY KEY (`id_agents`)
 );
 
@@ -41,7 +41,7 @@ CREATE TABLE `form_contact` (
 	`id_contact` INT NOT NULL AUTO_INCREMENT,
 	`id_utilisateur` INT NOT NULL,
 	`id_propriete` INT NOT NULL,
-	`message` TEXT(1000000) NOT NULL,
+	`message` TEXT(60000) NOT NULL,
 	PRIMARY KEY (`id_contact`)
 );
 
