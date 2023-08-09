@@ -52,6 +52,34 @@ include ('connexion.php');
 </section>
 
 
+<section class="property-section">
+  <?php
+  // créé une instance de votre classe de connexion à la base de données
+  $connexion = new Maconnexion('agencedb','','root','localhost'); // Assurez-vous de remplacer VotreClasseDeConnexion par le nom réel de votre classe
+
+  // Appel de la fonction pour récupérer les données des biens immobiliers
+  $properties = $connexion->selectbien_immo();
+  
+  foreach ($properties as $property) :
+  ?>
+    <div class="property-card">
+    <img src="<?php echo $property['image']; ?>" alt="">
+      <h2><?php echo $property['titre_bien']; ?></h2>
+      <p><?php echo $property['description']; ?></p>
+      <ul class="property-info">
+        <li><strong>ID Propriété:</strong> <?php echo $property['id_propriete']; ?></li>
+        <li><strong>Prix:</strong> <?php echo $property['prix_bien']; ?> €</li>
+        <li><strong>Localisation:</strong> <?php echo $property['localisation_bien']; ?></li>
+        <li><strong>Type:</strong> <?php echo $property['type_bien']; ?></li>
+        <li><strong>Status:</strong> <?php echo $property['status']; ?></li>
+      </ul>
+      <a href="#" class="btn">Voir l'article</a>
+    </div>
+  <?php endforeach; ?>
+</section>
+
+
+
 <div class="texte">
 <h2>Nos Agences DBMD974 proches de chez vous</h2>
 </div>
