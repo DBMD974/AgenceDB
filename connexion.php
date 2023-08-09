@@ -74,10 +74,10 @@ class MaConnexion
 
 
     //fonction pour selectionner des elements dans la bdd
-    public function selectmedecin()
+    public function selectbien_immo()
     {
         try {
-            $requete = "SELECT * from medecin";
+            $requete = "SELECT * from bien_immobilier";
             $requete_preparee = $this->connexionPDO->prepare($requete);
             $resultat = $requete_preparee->execute();
             $resultat = $requete_preparee->fetchAll(PDO::FETCH_ASSOC);
