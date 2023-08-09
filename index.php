@@ -51,11 +51,15 @@ include ('connexion.php');
   <!-- Répéter ces blocs pour d'autres propriétés -->
 </section>
 
+<div class="texte">
+<h2>Nos Agences DBMD974 proches de chez vous</h2>
+</div>
+
 
 <section class="property-section">
   <?php
   // créé une instance de votre classe de connexion à la base de données
-  $connexion = new Maconnexion('agencedb','','root','localhost'); // Assurez-vous de remplacer VotreClasseDeConnexion par le nom réel de votre classe
+  $connexion = new Maconnexion('agencedb','','root','localhost'); // nom réel de votre classe
 
   // Appel de la fonction pour récupérer les données des biens immobiliers
   $properties = $connexion->selectbien_immo();
@@ -80,9 +84,7 @@ include ('connexion.php');
 
 
 
-<div class="texte">
-<h2>Nos Agences DBMD974 proches de chez vous</h2>
-</div>
+
 
 <br>
 <br>

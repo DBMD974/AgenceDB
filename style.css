@@ -239,7 +239,6 @@ body {
 
 
   /* code de mon footer */
-/* ... Vos styles précédents ... */
 
 .footer {
     background: linear-gradient(to right, #000, #4686cb, #b4a738, #b4843d);
@@ -263,7 +262,7 @@ body {
     padding: 5px 70px;
   }
   
-  /* ... Vos styles précédents ... */
+
   
   .company-info {
     text-align: center;
@@ -302,4 +301,79 @@ body {
   }
   
 
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* la parti responsive */
+@media screen and (max-width: 370px) {
+    /* Mise en colonne pour tout le contenu à partir de 370px */
+    body {
+      flex-direction: column;
+    }
+    
+    /* Transformez le header en menu burger */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    /* Afficher le footer en display block */
+    .footer {
+      display: block;
+    }
+    
+    /* Ajoutez des styles spécifiques pour le menu burger */
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* ou la hauteur de votre header */
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+  
+    .nav-links.active a {
+      margin: 10px 0;
+    }
+  
+    /* Ajoutez des styles spécifiques pour le contenu en colonne */
+    .property-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
   
