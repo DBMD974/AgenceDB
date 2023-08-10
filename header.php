@@ -24,7 +24,7 @@
         </ul>
         <div class="auth-buttons">
         <i class="fa-solid fa-circle-user fa-2xl"></i></i><a href="inscription.php">S'inscrire</a>
-        <i class="fa-regular fa-circle-user fa-2xl"></i><a href="#">Se connecter</a>
+        <i class="fa-regular fa-circle-user fa-2xl"></i><a href="seconnecter.php">Se connecter</a>
         </div>
       </nav>
       <div class="header-text">

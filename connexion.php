@@ -104,10 +104,39 @@ class MaConnexion
             return "Erreur : " . $error->getMessage();
         }
     }
+
+
+
+    public function insertion_utilisateur_secure( $id_utilisateurs, $nom, $prenom, $email, $mdp)
+    {
+        try {
+            $requete = "INSERT INTO `utilisateur`( id_utilisateur, nom, prenom, email, mdp) VALUES (?, ?, ?, ?, ?)";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+
+            $requete_preparee->bindValue(1, $id_utilisateurs);
+            $requete_preparee->bindValue(2, $nom);
+            $requete_preparee->bindValue(3, $prenom);
+            $requete_preparee->bindValue(4, $email);
+            $requete_preparee->bindValue(5, $mdp);
+
+            $requete_preparee->execute();
+            return "insertion reussie";
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
+
+
+
+
+
+
 }
 
 
 $uneconnexion = new MaConnexion("agencedb", "", "root", "localhost");
+
 ?>
 
 

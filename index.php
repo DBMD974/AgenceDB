@@ -68,6 +68,7 @@ include ('connexion.php');
 
   ?>
     <div class="property-card">
+       
     <img src="<?php echo $property['image']; ?>" alt="">
       <h2><?php echo $property['titre_bien']; ?></h2>
       <p><?php echo $property['description']; ?></p>
@@ -79,10 +80,21 @@ include ('connexion.php');
         <li><strong>Status:</strong> <?php echo $property['status']; ?></li>
       </ul>
       <a href="#" class="btn">Voir l'article</a>
+      <button class="favorite-button" data-id="<?= $bien_immobilier['id']; ?>">
+        <i class="far fa-star"></i>
+      </button>
     </div>
   <?php endforeach; ?>
 </section>
 
+
+
+
+
+<!-- Conteneur des cartes favorites -->
+<div class="favorites-list">
+  <!-- Les cartes favorites seront ajoutées ici -->
+</div>
 
 
 

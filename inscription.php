@@ -1,3 +1,6 @@
+<?php
+include ('connexion.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
 
 
 <!-- formulaire d'inscription -->
-<form class="registration-form" action="traitement_inscription.php" method="POST">
+<form class="registration-form" action="connection.php" method="POST">
 <i class="fa-solid fa-circle-user fa-2xl" style="color: #ffffff;"></i><h2>Inscription</h2>
   <div class="form-group">
     <label for="nom">Nom :</label>
@@ -40,6 +43,30 @@
 
 <!-- bouton de retour -->
 <a href="index.php" class="back-button">Retour à l'accueil</a>
+
+
+<?php
+$connexion = new MaConnexion('agencedb','','root','localhost'); ?>
+
+
+    <?php
+    // Insérer l'utilisateur dans la base de données lorsque le formulaire est soumis
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $email = $_POST['email'];
+        $mdp = $_POST['mot_de_passe'];
+
+        // Appeler la fonction d'insertion sécurisée
+        $resultat = $connexion->insertion_utilisateur_secure(null, $nom, $prenom, $email, $mdp);
+
+        // Afficher le résultat de l'insertion (succès ou erreur)
+        echo $resultat;
+    }
+    ?>
+
+
+
 
 
 
