@@ -106,18 +106,18 @@ class MaConnexion
     }
 
 
-
-    public function insertion_utilisateur_secure( $id_utilisateurs, $nom, $prenom, $email, $mdp)
+// code ci-dessous pour la page inscription
+    public function insertion_utilisateur_secure( $nom, $prenom, $email, $mdp)
     {
         try {
-            $requete = "INSERT INTO `utilisateur`( id_utilisateur, nom, prenom, email, mdp) VALUES (?, ?, ?, ?, ?)";
+            $requete = "INSERT INTO `utilisateur`( nom, prenom, email, mdp) VALUES ( ?, ?, ?, ?)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
-            $requete_preparee->bindValue(1, $id_utilisateurs);
-            $requete_preparee->bindValue(2, $nom);
-            $requete_preparee->bindValue(3, $prenom);
-            $requete_preparee->bindValue(4, $email);
-            $requete_preparee->bindValue(5, $mdp);
+            // $requete_preparee->bindValue(1, $id_utilisateurs);
+            $requete_preparee->bindValue(1, $nom);
+            $requete_preparee->bindValue(2, $prenom);
+            $requete_preparee->bindValue(3, $email);
+            $requete_preparee->bindValue(4, $mdp);
 
             $requete_preparee->execute();
             return "insertion reussie";
@@ -125,6 +125,21 @@ class MaConnexion
             return $e->getMessage();
         }
     }
+
+
+// code ci-dessous pour la page connexion
+        public function select_where_utilisateur($table, $column, $email) {
+        try {
+            $requete = "SELECT $column FROM $table WHERE email = $email";
+            $resultat = $this->connexionPDO->prepare($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC); //
+
+            return $resultat;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
+
 
 
 
@@ -136,7 +151,7 @@ class MaConnexion
 
 
 $uneconnexion = new MaConnexion("agencedb", "", "root", "localhost");
-
+// $uneconnexion->insertion_utilisateur_secure('nom','prenom','email','mdp');
 ?>
 
 

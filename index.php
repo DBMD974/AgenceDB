@@ -80,9 +80,6 @@ include ('connexion.php');
         <li><strong>Status:</strong> <?php echo $property['status']; ?></li>
       </ul>
       <a href="#" class="btn">Voir l'article</a>
-      <button class="favorite-button" data-id="<?= $bien_immobilier['id']; ?>">
-        <i class="far fa-star"></i>
-      </button>
     </div>
   <?php endforeach; ?>
 </section>

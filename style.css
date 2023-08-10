@@ -130,35 +130,6 @@ body {
   }
 
 
-  /* Styles pour le bouton "Ajouter aux favoris" */
-/* Styles pour le bouton "Favoris" */
-.favorite-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.favorite-button i {
-  font-size: 1.5rem;
-  color: gray;
-  transition: color 0.3s;
-}
-
-.favorite-button.favorited i {
-  color: gold; /* Couleur de l'étoile remplie */
-}
-
-/* Styles pour les cartes favorites */
-.favorites-list {
-  /* Styles de mise en page des cartes favorites */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
 
 
 

@@ -16,7 +16,7 @@ include ('connexion.php');
 
 
 <!-- formulaire d'inscription -->
-<form class="registration-form" action="connection.php" method="POST">
+<form class="registration-form" action="module.php" method="POST">
 <i class="fa-solid fa-circle-user fa-2xl" style="color: #ffffff;"></i><h2>Inscription</h2>
   <div class="form-group">
     <label for="nom">Nom :</label>
@@ -32,7 +32,7 @@ include ('connexion.php');
   </div>
   <div class="form-group">
     <label for="mot_de_passe">Mot de passe :</label>
-    <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+    <input type="password" id="mot_de_passe" name="mdp" required>
   </div>
   <div class="form-group">
     <label for="confirmer_mot_de_passe">Confirmer le mot de passe :</label>
