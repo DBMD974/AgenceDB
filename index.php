@@ -63,7 +63,7 @@ include ('connexion.php');
 
   // Appel de la fonction pour récupérer les données des biens immobiliers
   $properties = $connexion->selectbien_immo();
-
+  
   foreach ($properties as $property) :
 
   ?>
@@ -79,7 +79,9 @@ include ('connexion.php');
         <li><strong>Type:</strong> <?php echo $property['type_bien']; ?></li>
         <li><strong>Status:</strong> <?php echo $property['status']; ?></li>
       </ul>
-      <a href="#" class="btn">Voir l'article</a>
+      <a href="article.php?id=<?= $bien_immobilier['id']; ?>" class="article-link">
+        Voir l'article
+      </a>
     </div>
   <?php endforeach; ?>
 </section>
@@ -88,23 +90,35 @@ include ('connexion.php');
 
 
 
-<!-- Conteneur des cartes favorites -->
-<div class="favorites-list">
-  <!-- Les cartes favorites seront ajoutées ici -->
+
+
+
+
+
+
+<div class="article-details">
+  <div class="article-content">
+    <div class="slogan">
+      <h2>DBMD974 <br>
+       Cabinet d'expertise en IMMOBILIER</h2>
+      <i class="fa-duotone fa-phone fa-2xl" style="--fa-primary-color: #ff8000; --fa-secondary-color: #ff8000;"></i>
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Exercitationem doloremque quam, tempora ullam molestias quod illo consequuntur maxime eaque unde. 
+       Odit, id nulla! Cum sapiente ab enim velit quas suscipit!
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+      iure sequi commodi illum excepturi neque!</p>
+    </div>
+    <div class="article-image">
+      <img src="images\Estimation.png" alt="Titre de l'article">
+    </div>
+  </div>
+  <p>Prix :100 euro</p>
+  <!-- Autres détails de l'article -->
 </div>
 
-
-
-
 <br>
 <br>
-<br>
-
-
-
-
-
-
 
 
 

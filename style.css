@@ -88,6 +88,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    
   }
   
   .property-card {
@@ -96,6 +97,7 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow  :  5px   5px   10px   1px   #000  ; 
   }
   
   .property-card img {
@@ -129,6 +131,52 @@ body {
     background-color: #0056b3;
   }
 
+
+
+
+  /* apres mes card en php */
+  .article-details {
+    background-color:#1a68a0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow  :  5px   5px   10px   1px   #000  ; 
+  }
+  
+  .article-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slogan {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .slogan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .slogan p {
+    font-size: 16px;
+    color:#ff9800;
+  }
+  
+  .article-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .article-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
 
 
 
