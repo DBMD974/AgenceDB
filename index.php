@@ -63,8 +63,9 @@ include ('connexion.php');
 
   // Appel de la fonction pour récupérer les données des biens immobiliers
   $properties = $connexion->selectbien_immo();
-  
+
   foreach ($properties as $property) :
+
   ?>
     <div class="property-card">
     <img src="<?php echo $property['image']; ?>" alt="">

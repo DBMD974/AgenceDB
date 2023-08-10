@@ -87,6 +87,23 @@ class MaConnexion
             return "Erreur : " . $error->getMessage();
         }
     }
+
+
+
+    //fonction pour selectionner des elements dans la bdd
+    public function selectagents()
+    {
+        try {
+            $requete = "SELECT * from agents";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            $resultat = $requete_preparee->execute();
+            $resultat = $requete_preparee->fetchAll(PDO::FETCH_ASSOC);
+
+            return $resultat;
+        } catch (PDOException $error) {
+            return "Erreur : " . $error->getMessage();
+        }
+    }
 }
 
 

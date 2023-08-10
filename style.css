@@ -142,8 +142,93 @@ body {
     color: rgb(255, 255, 255);
    padding-top: 2.5%;
   }
+
+  .imag{
+    display: flex;
+  }
   
   
+
+  /* css de ma page inscription */
+  /* Styles pour l'arrière-plan foncé */
+body.dark-bg{
+  background: url(./images/haider.jpg);
+}
+.dark-bg {
+  background-color: darkblue; /* Couleur de fond sombre */
+  color: rgb(255, 255, 255); /* Couleur du texte */
+  font-family: Arial, sans-serif; /* Police de caractères */
+  margin: 0; /* Supprime les marges par défaut du body */
+  padding: 0; /* Supprime les marges intérieures par défaut du body */
+  display: flex; /* Utilise le modèle d'affichage flexbox */
+  justify-content: center; /* Centre horizontalement le contenu */
+  align-items: center; /* Centre verticalement le contenu */
+  min-height: 100vh; /* Définit la hauteur minimale de la vue à 100% de la hauteur de l'écran */
+}
+
+/* Styles pour le formulaire d'inscription */
+.registration-form {
+  background: url(./images/haider.jpg) no-repeat; /* Arrière-plan du formulaire légèrement transparent */
+  padding: 20px; /* Marge intérieure du formulaire */
+  border-radius: 10px; /* Coins arrondis du formulaire */
+  max-width: 500px; /* Largeur maximale du formulaire */
+  width: 100%; /* Remplissage de l'espace disponible */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  text-align: center; /* Centre le texte à l'intérieur du formulaire */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Marge en bas de chaque groupe de formulaire */
+}
+
+.form-group label {
+  display: block; /* Affiche l'étiquette en bloc */
+  margin-bottom: 5px; /* Marge en bas de l'étiquette */
+}
+
+.form-group input {
+  width: 90%; /* Remplissage de l'espace disponible */
+  padding: 10px; /* Remplissage intérieur des champs de saisie */
+  border: 1px solid #000000; /* Bordure légère autour des champs de saisie */
+  border-radius: 5px; /* Coins arrondis des champs de saisie */
+}
+
+.btn {
+  display: inline-block; /* Affiche le bouton en ligne */
+  padding: 10px 20px; /* Remplissage intérieur du bouton */
+  background-color: white; /* Couleur de fond du bouton */
+  color: darkblue; /* Couleur du texte du bouton */
+  text-decoration: none; /* Supprime le soulignement du texte */
+  border-radius: 5px; /* Coins arrondis du bouton */
+  transition: background-color 0.3s, color 0.3s; /* Transition douce pour les changements de couleur */
+  cursor: pointer; /* Curseur de pointeur au survol */
+  font-size: x-large;
+}
+
+.btn:hover {
+  background-color: #f5f5f5; /* Couleur de fond du bouton au survol */
+  color: darkblue; /* Couleur du texte du bouton au survol */
+}
+
+/* css Styles pour le bouton "Retour à l'accueil" */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgb(168, 125, 5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 1000; /* Assurez-vous que le bouton reste au-dessus du contenu */
+}
+
+.back-button:hover {
+  background-color: #1a68a0; /* Couleur de fond au survol */
+}
+
+
+
 
 
 
@@ -311,10 +396,46 @@ body {
 
 
 
-  
+
 
   /* la parti responsive */
-@media screen and (max-width: 370px) {
+
+@media screen and (max-width: 800px) {
+
+     /* Ajustez le header pour le menu dropdown */
+     .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      .nav-links a {
+        display: block;
+      }
+      
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+
+    /* Pour les résolutions de tablette (jusqu'à 768px) */
+    .property-section {
+      grid-template-columns: repeat(2, 1fr); /* Deux cartes par ligne */
+    }
+  }
+  
+
+
+@media screen and (max-width: 400px) {
     /* Mise en colonne pour tout le contenu à partir de 370px */
     body {
       flex-direction: column;

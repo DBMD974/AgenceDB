@@ -23,7 +23,7 @@
           <li><a href="#">Estimer</a></li>
         </ul>
         <div class="auth-buttons">
-        <i class="fa-solid fa-circle-user fa-2xl"></i></i><a href="#">S'inscrire</a>
+        <i class="fa-solid fa-circle-user fa-2xl"></i></i><a href="inscription.php">S'inscrire</a>
         <i class="fa-regular fa-circle-user fa-2xl"></i><a href="#">Se connecter</a>
         </div>
       </nav>
