@@ -79,9 +79,10 @@ include ('connexion.php');
         <li><strong>Type:</strong> <?php echo $property['type_bien']; ?></li>
         <li><strong>Status:</strong> <?php echo $property['status']; ?></li>
       </ul>
-      <a href="article.php?id=<?= $bien_immobilier['id']; ?>" class="article-link">
+      <a href="#" class="btn">Voir l'article</a>
+      <!-- <a href="article.php?id=<?= $bien_immobilier['id']; ?>" class="article-link">
         Voir l'article
-      </a>
+      </a> -->
     </div>
   <?php endforeach; ?>
 </section>
@@ -119,33 +120,6 @@ include ('connexion.php');
 
 <br>
 <br>
-
-
-<!-- mon carousel -->
-<div class="carousel">
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <img src="images\hotel (1).jpg" alt="Image 1">
-    </div>
-    <div class="carousel-slide">
-      <img src="images\maison (2).jpg" alt="Image 2">
-    </div>
-    <div class="carousel-slide">
-      <img src="images\terrain.jpg" alt="Image 3">
-    </div>
-    <div class="carousel-slide">
-      <img src="images\chambre (1).jpg" alt="Image 4">
-    </div>
-    <div class="carousel-slide">
-      <img src="images\maison (5).jpg" alt="Image 5">
-    </div>
-    <div class="carousel-navigation">
-    <button class="carousel-prev"><i class="fa fa-chevron-left"></i></button>
-    <button class="carousel-next"><i class="fa fa-chevron-right"></i></button>
-  </div>
-  </div>
-</div>
-
 
 
 

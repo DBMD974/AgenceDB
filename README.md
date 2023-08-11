@@ -15,7 +15,7 @@ la demonstration parlera d'elle meme sur mon savoir faire et de mon imagination 
 - Objectifs : Créer une interface dynamique, intuitive et réactive avec des fonctionnalités de recherche, filtrage, formulaire de contact.
 
 **but 3: Modalités Pédagogiques et d'Évaluation**
-- Technologies : HTML, CSS, JavaScript
+- Technologies : HTML, CSS, PHP, j'ai eviter le javascript. 
 - Travail individuel
 - Évaluation : Interface ergonomique, design professionnel, navigation fluide, fonctionnalités implémentées.
 
