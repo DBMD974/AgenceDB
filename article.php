@@ -5,6 +5,12 @@ if (isset($_GET['id'])) {
   // Utilisez $articleId pour récupérer les détails de l'article de votre base de données
   // par exemple, $article = getArticleById($articleId);
 }
+
+include ('connexion.php');
+$uneconnexion -> select_where_articles($_POST['image'],$_POST ['titre_bien'],$_POST['description'],
+$_POST['id_propriete'],$_POST['prix_bien'],$_POST['localisation_bien'],$_POST['type_bien'],$_POST['status']);
+
+
 ?>
 
 

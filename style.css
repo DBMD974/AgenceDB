@@ -106,6 +106,10 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
   }
+
+  .property-card img:hover{
+    max-width: 500px;
+  }
   
   .property-card h2 {
     font-size: 24px;
@@ -209,6 +213,90 @@ body {
     display: flex;
   }
   
+
+
+
+
+
+
+/* mon carousel */
+.carousel {
+  width: 90%;
+  max-width: 1200px; /* Ajustez selon vos besoins */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ajoutez ces styles pour les flèches de navigation */
+.carousel-navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.carousel-prev:focus,
+.carousel-next:focus {
+  outline: none;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  color: #555;
+}
+
+
+/* Styles pour rendre le carrousel réactif */
+@media screen and (max-width: 768px) {
+  .carousel {
+    max-width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   /* css de ma page inscription */
