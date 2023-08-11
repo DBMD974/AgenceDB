@@ -20,7 +20,7 @@
           <li><a href="#">Acheter</a></li>
           <li><a href="#">Vendre</a></li>
           <li><a href="#">Louer</a></li>
-          <li><a href="#">Estimer</a></li>
+          <li><a href="estimation.php">Estimer</a></li>
         </ul>
         <div class="auth-buttons">
         <i class="fa-solid fa-circle-user fa-2xl"></i></i><a href="inscription.php">S'inscrire</a>
